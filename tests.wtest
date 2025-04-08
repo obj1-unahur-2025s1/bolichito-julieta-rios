@@ -1,0 +1,97 @@
+import objetos.*
+import personas.*
+
+test "el rojo es un color fuerte"{
+    assert.that(rojo.esFuerte())
+}
+
+test "el naranja es un color fuerte"{
+    assert.that(naranja.esFuerte())
+}
+
+
+test "el pardo no es un color fuerte"{
+    assert.notThat(pardo.esFuerte())
+}
+
+test "puedo modificar el peso de la placa"{
+    placa.peso(600)
+    assert.equals(600, placa.peso())
+}
+
+test "el peso original de la placa es 0"{
+    assert.equals(0, placa.peso())
+}
+
+test "A Rosa le gusta el muñeco liviano"{
+    munieco.peso(1999)
+    assert.that(rosa.leGusta(munieco))
+}
+
+test "A Rosa le gusta la pelota"{
+    assert.that(rosa.leGusta(pelota))
+}
+
+test "A Rosa no le gusta la biblioteca"{
+    assert.notThat(rosa.leGusta(biblioteca))
+}
+
+test "A Rosa no le gusta la placa pesada"{
+    placa.peso(3500)
+    assert.notThat(rosa.leGusta(placa))
+}
+
+
+test "A Estefanía le gusta la placa roja"{
+    placa.color(rojo)
+    assert.that(estefania.leGusta(placa))
+}
+
+test "A Estefanía le gusta biblioteca"{
+    assert.that(estefania.leGusta(biblioteca))
+}
+
+test "A Estefanía no le gusta la pelota"{
+    assert.notThat(estefania.leGusta(pelota))
+}
+
+test "A Estefanía no le gusta el muñeco"{
+    assert.notThat(estefania.leGusta(munieco))
+}
+
+test "A Luisa le gusta la placa"{
+    assert.that(luisa.leGusta(placa))
+}
+
+test "A Luisa le gusta el muñeco"{
+    assert.that(luisa.leGusta(munieco))
+}
+
+test "A Luisa no le gusta la remera"{
+    assert.notThat(luisa.leGusta(remera))
+}
+
+test "A Luisa no le gusta la pelota"{
+    assert.notThat(luisa.leGusta(pelota))
+}
+
+test "A Juan le gusta la pelota"{
+    assert.that(juan.leGusta(pelota))
+}
+
+test "A Juan le gusta la muñeco"{
+    assert.that(juan.leGusta(munieco))
+}
+
+test "A Juan le gusta la placa liviana"{
+    placa.peso(1500)
+    assert.that(juan.leGusta(placa))
+}
+
+test "A Juan no le gusta la biblioteca"{
+    assert.notThat(juan.leGusta(biblioteca))
+}
+
+test "A Juan no le gusta la remera"{
+    assert.notThat(juan.leGusta(remera))
+}
